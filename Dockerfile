@@ -1,5 +1,5 @@
 # Use an official PHP runtime as a parent image
-FROM php:7.4-apache
+FROM php:8.2-apache
 
 # Set working directory in the container
 WORKDIR /var/www/html
@@ -40,12 +40,13 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Install npm
 RUN apt-get update && apt-get install -y npm
 
-# Install project dependencies
-RUN composer install -v
-RUN npm install
-
 # Copy the current directory contents into the container at /var/www/html
 COPY . /var/www/html
+
+# Remove composer.lock and update project dependencies
+RUN rm composer.lock
+RUN composer install
+RUN npm install
 
 # Make port 80 available to the world outside this container
 EXPOSE 80
