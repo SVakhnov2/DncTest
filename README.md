@@ -41,7 +41,7 @@ What things you need to install the software and how to install them. For exampl
 
 A step by step series of examples that tell you how to get a development environment running.
 
-1. Clone the repo: `git clone https://github.com/username/projectname.git`
+1. Clone the repo: `git clone https://github.com/SVakhnov2/DncTest.git`
 2. Install PHP dependencies: `composer install`
 3. Install JavaScript dependencies: `npm install`
 4. Copy the example env file and make the required configuration changes in the .env file: `cp .env.example .env`
