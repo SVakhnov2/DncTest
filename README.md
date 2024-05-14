@@ -53,6 +53,10 @@ A step by step series of examples that tell you how to get a development environ
 
 This project provides several endpoints that you can use to interact with the application. Here are some of the main endpoints:
 
+### OpenApi documentation Endpoints
+
+- `GET /api/documentation`: OpenApi documentation.
+
 ### Task Endpoints
 
 - `GET /api/tasks`: Fetch all tasks.
