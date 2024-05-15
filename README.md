@@ -49,6 +49,35 @@ A step by step series of examples that tell you how to get a development environ
 6. Run the database migrations: `php artisan migrate`
 7. Start the local development server: `php artisan serve`
 
+### Or
+
+### Installation with Docker
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes using Docker.
+
+### Prerequisites
+
+Ensure you have the following installed on your local system:
+
+- Docker
+- Docker Compose
+
+### Steps
+
+1. Clone the repo: `git clone https://github.com/SVakhnov2/DncTest.git`
+
+2. Navigate to the project directory: `cd DncTest`
+
+3. Build the Docker images: `docker-compose build`
+
+4. Start the Docker containers: `docker-compose up -d`
+
+5. Generate a new application key: `docker-compose exec app php artisan key:generate`
+
+6. Run the database migrations: `docker-compose exec app php artisan migrate`
+
+Your application should now be running and accessible at `localhost:8181` (or whatever port you've configured).
+
 ## Usage
 
 This project provides several endpoints that you can use to interact with the application. Here are some of the main endpoints:
